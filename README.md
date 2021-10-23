@@ -18,7 +18,7 @@
 | title        | string      | null: false                    |
 | catch_copy   | text        | null: false                    |
 | concept      | text        | null: false                    |
-| user         | refereneces | null: false, foreign_key: true |
+| user         | references | null: false, foreign_key: true |
 
 ## comments テーブル
 
