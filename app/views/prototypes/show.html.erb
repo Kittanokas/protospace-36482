@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="prototype__wrapper">
       <p class="prototype__hedding">
-        <%= "プロトタイプのタイトル"%>
+        <%= @prototype.title %>
       </p>
       <%= link_to ("by" + @prototype.user.name), "/users/#{@prototype.user.id}", class: :prototype__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
@@ -48,7 +48,7 @@
           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
             <li class="comments_list">
               <%= @comments.each do |comment| %>
-              <%= link_to "#{@prototype.user.name}", "/users/#{@prototype.user.id}", class: :comment_user %>
+              <%= link_to comment.user.name, "/users/#{comment.user.id}", class: :comment_user %>
               <%= comment.content %>
             <% end %>  
             </li>
